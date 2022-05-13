@@ -82,3 +82,31 @@ body {
 .topnav-right {
     float: right;
 }
+
+
+table {
+
+    padding-top: 100px;
+}
+
+table tr th {
+
+    font-size: 200px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 100px;
+}
+
+table tr th.start {
+
+    text-align: right;
+}
+
+table tr th.q {
+
+    font-size: 75px;
+    text-align: right;
+
+}
+
