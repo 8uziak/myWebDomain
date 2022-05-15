@@ -10,7 +10,7 @@
 
     <title>Mateusz Buziak</title>
 
-    <link rel= "stylesheet" type= "text/css" href= "main.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
 
 </head>
 
@@ -19,15 +19,16 @@
     
     <nav class="topnav">
 
-        <a class="home" href="index.html">Home</a>
-        <a class="projects" href="projects.html">Projects</a>
+        <a class="home clicked" class="home"  href=" {{ url_for('index') }} ">Home</a>
+        <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
 
-        <nav class="topnav-right">
-            <a class="about" href="about.html">About me</a>
-            <a class="contact clicked" class="contact" href="contact.html">Contact</a>
-        </nav>
-                    
+    <nav class="topnav-right">
+        <a class="about" href=" {{ url_for('about') }} ">About me</a>
+        <a class="contact clicked" href=" {{ url_for('contact') }} ">Contact</a>
     </nav>
+        
+        
+</nav>
     
     <table>
         <tr>
@@ -38,7 +39,7 @@
         </tr>
         <tr>      
             <th>
-            matbuziak@gmail.com
+                <a href="mailto:matbuziak@gmail.com">matbuziak@gmail.com</a>
             </th>
         </tr>
     </table>

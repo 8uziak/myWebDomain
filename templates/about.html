@@ -10,23 +10,49 @@
 
     <title>Mateusz Buziak</title>
 
-    <link rel= "stylesheet" type= "text/css" href= "main.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
 
 </head>
 <body class="about background">
     
     <nav class="topnav">
 
-        <a class="home" href="index.html">Home</a>
-        <a class="projects" href="projects.html">Projects</a>
+        <a class="home" class="home"  href=" {{ url_for('index') }} ">Home</a>
+        <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
 
     <nav class="topnav-right">
-        <a class="about clicked" class="about" href="about.html">About me</a>
-        <a class="contact" href="contact.html">Contact</a>
+        <a class="about clicked" href=" {{ url_for('about') }} ">About me</a>
+        <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>
     </nav>
         
         
 </nav>
+
+    <table style="font-size: 50px">
+        <tr>
+            <th>
+                About
+            </th>
+        </tr>
+        <tr>
+            <th>
+                	
+                &#10158; <a href="https://www.linkedin.com/in/mateusz-buziak/" target="_blank">LinkedIn</a>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                A curious person with a knack for learning quickly to explore new technologies. Possesses an ability 
+                to make new contacts and work in a team. Discipline and a penchant for finding new solutions, along 
+                with a love of order, make him well acquainted with many areas of IT. He is certified and proficient in 
+                Python, SQL, Tableau, Excel, R programming language. He regularly works on various Python projects, 
+                the results of which can be seen on GitHub (link below). His goal is to work as a Data Engineer and work 
+                with ambitious, experienced analysts. 
+            </th>
+        </tr>
+ 
+
+    </table>
 
 </body>
 </html>
