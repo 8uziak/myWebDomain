@@ -3,12 +3,54 @@
 body {
     margin: 0;
     font-family: 'Oswald', sans-serif;
-    
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 a {
+    cursor: pointer;    
     text-decoration: none;
+    color: #F78888;
 }
+
+p {
+    line-height: 15%;
+}
+
+.title {
+
+    font-size: 175px;
+    cursor: pointer;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color:#070707
+}
+
+.subtitle {
+
+    font-size: 125px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.date {
+
+    font-size: 75px;
+    cursor: pointer;
+    text-align: right;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color:#90CCF4;
+}
+
 
 
 
@@ -96,6 +138,7 @@ table {
 
 table tr th {
 
+    cursor: default;
     font-size: 200px;
     text-align: left;
     padding-top: 10px;
@@ -114,4 +157,6 @@ table tr th.q {
     text-align: right;
 
 }
+
+
 

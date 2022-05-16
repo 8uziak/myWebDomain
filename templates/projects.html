@@ -13,6 +13,7 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
 
 </head>
+
 <body class="projects background">
     
     <nav class="topnav">
@@ -23,13 +24,35 @@
     <nav class="topnav-right">
         <a class="about" href=" {{ url_for('about') }} ">About me</a>
         <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>
+
     </nav>
-        
-        
-</nav>
-        
-        
-</nav>
+    </nav>
+  
+
+    <!-- Main Content -->
+    <div>
+        <div\>
+          <div>
+          {% for post in posts %}
+            <div>
+              <a href="{{ url_for('post', post_id=post.id) }}">
+                <p class="title">
+                  {{ post.title }}
+                </p>
+                <p class="subtitle">
+                  {{ post.subtitle }}
+                </p>
+                <p class="date">
+                  Posted on {{ post.date_posted.strftime('%B %d, %Y') }}
+                </p>
+              </a>
+            </div>
+            {% endfor %}
+            <hr>
+          </div>
+        </div>
+      </div>
+  
 
 </body>
 </html>

@@ -1,48 +1,45 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
+    
 <head>
-
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <title>Mateusz Buziak</title>
-
+        
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
-
+    
 </head>
 
-
-<body class="contact background" >
+<body class="projects background">
     
     <nav class="topnav">
 
         <a class="home" class="home"  href=" {{ url_for('index') }} ">Home</a>
-        <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
+        <a class="projects clicked" href=" {{ url_for('projects') }} ">Projects</a>
 
     <nav class="topnav-right">
-        <a class="about" href=" {{ url_for('about') }} ">About me</a>
-        <a class="contact clicked" href=" {{ url_for('contact') }} ">Contact</a>
-    </nav>
-        
-        
-</nav>
-    
-    <table>
-        <tr>
-            <th>
-                <span style="color:#F78888">Contact me ;)</span>
-            </th>
 
-        </tr>
-        <tr>      
-            <th>
-                <a class="disabled-link" href="mailto:matbuziak@gmail.com">matbuziak@gmail.com</a>
-            </th>
-        </tr>
-    </table>
+        <a class="about" href=" {{ url_for('about') }} ">About me</a>
+        <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>
+        
+    </nav>
+    </nav>
+  
+    
+    <!-- Post Content -->
+    <article>
+        <div>
+            <div>
+                <div>
+                {{ post.content|safe }}
+                </div>
+            </div>
+        </div>
+    </article>
+
 
 </body>
 </html>
