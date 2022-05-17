@@ -21,6 +21,8 @@ p {
 
 .title {
 
+    line-height: 75%;
+    word-wrap: break-word;
     font-size: 175px;
     cursor: pointer;
     text-align: left;
@@ -32,29 +34,81 @@ p {
 
 .subtitle {
 
+    line-height: 75%;
+    word-wrap: break-word;
     font-size: 125px;
     cursor: pointer;
     text-align: center;
     padding-top: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 110px;
+    padding-right: 110px;
+    color:#ECECEC
 }
 
 .date {
 
+    word-wrap: break-word;
     font-size: 75px;
     cursor: pointer;
     text-align: right;
     padding-top: 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+    color:#90CCF4;
+}
+
+.title:hover, .subtitle:hover, .date:hover {
+
+    color:#5DA2D5;
+}
+
+.everything {
+
+    color:#F3D250;
+}
+
+.everything:hover {
+
+    color:#5DA2D5;
+
+}
+
+.content {
+
+    margin-top: 0px;
+    font-size: 175px;
+    cursor: default;
+    text-align: left;
     padding-left: 100px;
     padding-right: 100px;
-    color:#90CCF4;
+    color:#070707
 }
 
 
 
+.disabled-link:hover {
+
+    color:#F3D250;
+}
+
+.content div {
+
+    color:#5DA2D5;
+    font-size: 75px;
+}
+
+.footer-end {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 175px;
+    cursor: default;
+    text-align: center;
+    color:#070707
+}
 
 .topnav {
+    
     overflow: hidden;
     background-color: #ECECEC;
     position: -webkit-sticky;
@@ -125,6 +179,13 @@ p {
     background-color: #5DA2D5;
 }
 
+.topnav-middle {
+
+    float:none;
+    text-align: center;
+    font-size: 30px;
+
+}
 
 .topnav-right {
     float: right;

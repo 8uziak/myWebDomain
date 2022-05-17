@@ -15,19 +15,25 @@
 </head>
 <body class="about background">
     
+  <!-- Content -->
     <nav class="topnav">
 
         <a class="home" class="home"  href=" {{ url_for('index') }} ">Home</a>
         <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
 
+    <nav class="topnav-middle">
+    &lt;mateuszbuziak&gt;
+
+
     <nav class="topnav-right">
         <a class="about clicked" href=" {{ url_for('about') }} ">About me</a>
         <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>
-    </nav>
-        
-        
-</nav>
 
+    </nav>
+    </nav>
+    </nav>
+
+    <!-- Content -->
     <table style="font-size: 50px">
         <tr>
             <th>
@@ -37,11 +43,11 @@
         <tr>
             <th>
                 	
-                &#10158; <a href="https://www.linkedin.com/in/mateusz-buziak/" target="_blank">LinkedIn</a>
+                &#10158; <a class="disabled-link" href="https://www.linkedin.com/in/mateusz-buziak/" target="_blank">LinkedIn</a>
             </th>
         </tr>
         <tr>
-            <th>
+            <th class="content">
                 A curious person with a knack for learning quickly to explore new technologies. Possesses an ability 
                 to make new contacts and work in a team. Discipline and a penchant for finding new solutions, along 
                 with a love of order, make him well acquainted with many areas of IT. He is certified and proficient in 
@@ -53,6 +59,24 @@
  
 
     </table>
+
+        <!-- Footer -->
+        <div style="margin-bottom:100px"></div>
+    
+
+        <footer>
+          <div>
+            <div class="topnav">
+              <div class="footer-end">
+                &lt;/mateuszbuziak&gt;
+              </div>
+              <div>
+                Copyright &copy; Mateusz Buziak 2022
+              </div>
+            </div>
+          </div>
+        </footer>
+    
 
 </body>
 </html>

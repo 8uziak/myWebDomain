@@ -16,10 +16,15 @@
 
 <body class="projects background">
     
+  <!-- Content -->
     <nav class="topnav">
 
         <a class="home" class="home"  href=" {{ url_for('index') }} ">Home</a>
         <a class="projects clicked" href=" {{ url_for('projects') }} ">Projects</a>
+
+    <nav class="topnav-middle">
+      &lt;mateuszbuziak&gt;
+    
 
     <nav class="topnav-right">
         <a class="about" href=" {{ url_for('about') }} ">About me</a>
@@ -27,32 +32,51 @@
 
     </nav>
     </nav>
-  
+    </nav>
 
-    <!-- Main Content -->
+    <!-- Content -->
     <div>
         <div\>
           <div>
           {% for post in posts %}
             <div>
               <a href="{{ url_for('post', post_id=post.id) }}">
-                <p class="title">
+                <div class="title">
                   {{ post.title }}
-                </p>
-                <p class="subtitle">
+                </div>
+                <div class="subtitle">
                   {{ post.subtitle }}
-                </p>
-                <p class="date">
+                </div>
+                <div class="date">
                   Posted on {{ post.date_posted.strftime('%B %d, %Y') }}
-                </p>
+                </div>
               </a>
             </div>
             {% endfor %}
-            <hr>
           </div>
         </div>
       </div>
+
+    <!-- Footer -->
+    <div style="margin-bottom:100px"></div>
+    
+
+    <footer>
+      <div>
+        <div class="topnav">
+          <div class="footer-end">
+            &lt;/mateuszbuziak&gt;
+          </div>
+          <div>
+            Copyright &copy; Mateusz Buziak 2022
+          </div>
+        </div>
+      </div>
+    </footer>
+
   
+  
+    </body>
 
 </body>
 </html>

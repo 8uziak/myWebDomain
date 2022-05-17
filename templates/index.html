@@ -18,20 +18,25 @@
 
 <body class="home background">
 
-   
+    <!-- Content -->
     <nav class="topnav">
 
-            <a class="home clicked" class="home"  href=" {{ url_for('index') }} ">Home</a>
-            <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
+        <a class="home clicked" class="home"  href=" {{ url_for('index') }} ">Home</a>
+        <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
 
-        <nav class="topnav-right">
-            <a class="about" href=" {{ url_for('about') }} ">About me</a>
-            <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>
-        </nav>
-            
-            
+    <nav class="topnav-middle">
+    &lt;mateuszbuziak&gt;
+
+
+    <nav class="topnav-right">
+        <a class="about" href=" {{ url_for('about') }} ">About me</a>
+        <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>
+
+    </nav>
+    </nav>
     </nav>
 
+    <!-- Content -->
     <div>
 
             <table>
@@ -50,7 +55,7 @@
 
                     </th>                
                     <th>
-                        <span style="color:#FED250">everything </span>  we do  
+                        <span class="everything">everything </span>  we do  
                     </th>
 
                 </tr>
@@ -64,6 +69,24 @@
             </table>
 
     </div>
+
+    <!-- Footer -->
+    <div style="margin-bottom:100px"></div>
+    
+
+    <footer>
+      <div>
+        <div class="topnav">
+          <div class="footer-end">
+            &lt;/mateuszbuziak&gt;
+          </div>
+          <div>
+            Copyright &copy; Mateusz Buziak 2022
+          </div>
+        </div>
+      </div>
+    </footer>
+
 
 </body>
 </html>
