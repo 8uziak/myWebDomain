@@ -1,8 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap');
 
+
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+html {
+
+    height: 100%;
+}
+
 body {
-    margin: 0;
+
     font-family: 'Oswald', sans-serif;
+    background-color: #ECECEC;
+    min-height: 100%;
+    position:relative;
+
+}
+
+footer {
+
+    position: bottom;
+    bottom: 0;
+    overflow: hidden;
+    width:100%;
+    background-color: #ECECEC;
+    padding-top:5px;
+    cursor: default;
+
+}
+
+footer .buz {
+
+    color:#070707;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer; 
 }
 
 ::-webkit-scrollbar { 

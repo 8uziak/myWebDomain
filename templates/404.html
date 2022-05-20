@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mateusz Buziak</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
+    {% block head %}{% endblock %}
+
+</head>
+
+
+<body class="topnav">
+
+    <!-- Navbar -->
+    <nav class="topnav">
+
+        <a class="home" class="home"  href=" {{ url_for('index') }} ">Home</a>
+        <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
+
+    <nav class="topnav-middle">
+    &lt;mateuszbuziak&gt;
+
+
+    <nav class="topnav-right">
+        <a class="about" href=" {{ url_for('about') }} ">About me</a>
+        <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>
+
+    </nav>
+    </nav>
+    </nav>
+
+
+    <!-- Content -->
+    <div class="topnav"> Oops! Looks like the page doesn't exist ;( </div>
+
+    <!-- Footer -->
+    <div style="margin-bottom:500px"></div>
+    
+
+    <footer>
+    <div>
+        <div>
+            <div class="buz">
+            &lt;/mateuszbuziak&gt;
+            </div>
+            <div>
+             Copyright &copy; Mateusz Buziak 2022
+            </div>
+        </div>
+    </div>
+    </footer>
+    
+</body>
+</html>
