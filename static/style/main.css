@@ -1,39 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap');
 
 
-html, body {
-    margin:0;
-    padding:0;
-    height:100%;
-}
+/* BASICS -- */
 
-html {
+body { 
 
-    height: 100%;
-}
-
-body {
-
-    font-family: 'Oswald', sans-serif;
-    background-color: #ECECEC;
-    min-height: 100%;
-    position:relative;
+  min-height: 100vh; 
+  margin: 0; 
+  font-family: 'Oswald', sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 
 }
 
-footer {
+::-webkit-scrollbar { 
+  display: none; 
+}
 
-    position: bottom;
-    bottom: 0;
-    overflow: hidden;
-    width:100%;
-    background-color: #ECECEC;
-    padding-top:5px;
-    cursor: default;
+/* HEADER --TOPNAV */
+
+header { 
+  background:#ECECEC; 
+}
+
+header ul {
+
+  color: #070707;
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+}
+
+header ul li.left {
+
+  text-align: center;
+  float: left;
+  font-size: 17px;
+}
+
+header ul li.mid {
+
+  text-align: center;
+  cursor: default;
+  font-size: 30px;
+}
+
+header ul li.right {
+
+  text-align: center;
+  float: right;
+  font-size: 17px;
+}
+
+header ul li a {
+  display: block;
+  color: #070707;
+  cursor: pointer;    
+  text-decoration: none;
+  padding: 14px 16px;
+  word-spacing: 30px;
+}
+
+header.home ul li a {
+
+  background-color: #ECECEC;
+}
+
+header.home ul li a.home {
+
+  background-color: #F78888;
+}
+
+header ul li a.home:hover {
+
+  background-color: #F78888;
+}
+
+header.projects ul li a.projects {
+  
+  background-color: #F3D250;
+}
+
+header ul li a.projects:hover {
+
+  background-color: #F3D250;
+}
+
+header.about ul li a.about {
+  
+  background-color: #90CCF4;
+}
+
+header ul li a.about:hover {
+
+  background-color: #90CCF4;
+}
+
+header.contact ul li a.contact {
+  
+  background-color: #5DA2D5;
+}
+
+header ul li a.contact:hover {
+
+  background-color: #5DA2D5;
+}
+
+/* FOOTER -- */
+
+footer { 
+
+  min-height:50px; 
+  background:#ECECEC; 
+  position: bottom;
+  overflow: hidden;
+  padding-top:0px;
+  cursor: default;
+
 
 }
 
-footer .buz {
+footer ul {
+  text-decoration: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+}
+
+footer ul li.end-logo {
 
     color:#070707;
     text-align: center;
@@ -41,228 +138,32 @@ footer .buz {
     cursor: pointer; 
 }
 
-::-webkit-scrollbar { 
-    display: none; 
+footer ul li.copyright {
+
+  color:#070707;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer; 
 }
 
-a {
-    cursor: pointer;    
-    text-decoration: none;
-    color: #F78888;
+/* BODY --------------------------------- */
+
+article {
+  background-color: #ECECEC ;
 }
 
-p {
-    line-height: 15%;
+article.home {
+  background-color: #F78888;
 }
 
-.title {
-
-    line-height: 75%;
-    word-wrap: break-word;
-    font-size: 175px;
-    cursor: pointer;
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-    color:#070707
+article.projects {
+  background-color: #F3D250;
 }
 
-.subtitle {
-
-    line-height: 75%;
-    word-wrap: break-word;
-    font-size: 125px;
-    cursor: pointer;
-    text-align: center;
-    padding-top: 10px;
-    padding-left: 110px;
-    padding-right: 110px;
-    color:#ECECEC
+article.about {
+  background-color: #90CCF4;
 }
 
-.date {
-
-    word-wrap: break-word;
-    font-size: 75px;
-    cursor: pointer;
-    text-align: right;
-    padding-top: 10px;
-    padding-left: 90px;
-    padding-right: 90px;
-    color:#90CCF4;
+article.contact {
+  background-color: #5DA2D5;
 }
-
-.title:hover, .subtitle:hover, .date:hover {
-
-    color:#5DA2D5;
-}
-
-.everything {
-
-    color:#F3D250;
-}
-
-.everything:hover {
-
-    
-    color:#5DA2D5;
-
-}
-
-.center {
-
-    margin:0%;
-    text-align: center;
-}
-
-.content {
-
-    margin-top: 0px;
-    font-size: 175px;
-    cursor: default;
-    text-align: left;
-    padding-left: 100px;
-    padding-right: 100px;
-    color:#070707
-}
-
-
-
-.disabled-link:hover {
-
-    color:#F3D250;
-}
-
-.content div {
-
-    color:#5DA2D5;
-    font-size: 75px;
-}
-
-.footer-end {
-
-    cursor: default;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 175px;
-    cursor: default;
-    text-align: center;
-    color:#070707
-}
-
-.topnav {
-    
-    overflow: hidden;
-    background-color: #ECECEC;
-    position: -webkit-sticky;
-    position: sticky;
-}
-
-
-.topnav a {
-    float: left;
-    color: #070707;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-
-.topnav a.home.clicked {
-    background-color: #F78888;
-}
-
-.topnav a.projects.clicked {
-    background-color: #F3D250;
-}
-
-.topnav a.about.clicked {
-    background-color: #90CCF4;
-}
-
-.topnav a.contact.clicked {
-    background-color: #5DA2D5;
-}
-
-
-.topnav a.home:hover {
-    background-color: #F78888;
-
-}
-
-.topnav a.projects:hover {
-    background-color: #F3D250;
-    color: rgb(0, 0, 0);
-}
-
-.topnav a.about:hover {
-    background-color: #90CCF4;
-    color: rgb(0, 0, 0);
-}
-.topnav a.contact:hover {
-    background-color: #5DA2D5;
-    color: rgb(0, 0, 0);
-}
-
-
-.home.background {
-    background-color: #F78888;
-}
-
-.projects.background {
-    background-color: #F3D250;
-}
-
-.about.background {
-    background-color: #90CCF4;
-}
-
-.contact.background {
-    background-color: #5DA2D5;
-}
-
-.topnav-middle {
-
-    float:none;
-    text-align: center;
-    font-size: 30px;
-    cursor: default;
-
-}
-
-.topnav-right {
-    float: right;
-}
-
-
-table {
-
-    padding-top: 100px;
-}
-
-table tr th {
-
-    cursor: default;
-    font-size: 200px;
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 100px;
-}
-
-table tr th.start {
-
-    text-align: right;
-}
-
-table tr th.q {
-
-    font-size: 75px;
-    text-align: right;
-
-}
-
-
-

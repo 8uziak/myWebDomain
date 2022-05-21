@@ -1,82 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mateusz Buziak</title>
+  <title>Mateusz Buziak</title>
 
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
 
 </head>
-<body class="about background">
-    
-  <!-- Navbar -->
-    <nav class="topnav">
 
-        <a class="home" class="home"  href=" {{ url_for('index') }} ">Home</a>
+<body>
+
+<!-- HEADER -->
+  <header class="about">
+    <ul>
+      <li class="left">
+        <a class="home" href=" {{ url_for('index') }} ">Home</a>
+      </li>
+      <li class="left">
         <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
+      </li>
+      <li class="right">
+        <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>        
+      </li>
+      <li class="right">
+        <a class="about" href=" {{ url_for('about') }} ">About</a>
+      </li>
+      <li class="mid">
+        &lt;mateuszbuziak&gt;       
+      </li>
+    </ul>
+  </header>
 
-    <nav class="topnav-middle">
-    &lt;mateuszbuziak&gt;
+<!-- ARTICLE (!) -->
+  <article class="about">
+    Content
+  </article>
 
-
-    <nav class="topnav-right">
-        <a class="about clicked" href=" {{ url_for('about') }} ">About me</a>
-        <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>
-
-    </nav>
-    </nav>
-    </nav>
-
-    <!-- Content -->
-    <table style="font-size: 50px">
-        <tr>
-            <th>
-                About
-            </th>
-        </tr>
-        <tr>
-            <th>
-                	
-                &#10158; <a class="disabled-link" href="https://www.linkedin.com/in/mateusz-buziak/" target="_blank">LinkedIn</a>
-            </th>
-        </tr>
-        <tr>
-            <th class="content">
-                A curious person with a knack for learning quickly to explore new technologies. Possesses an ability 
-                to make new contacts and work in a team. Discipline and a penchant for finding new solutions, along 
-                with a love of order, make him well acquainted with many areas of IT. He is certified and proficient in 
-                Python, SQL, Tableau, Excel, R programming language. He regularly works on various Python projects, 
-                the results of which can be seen on GitHub (link below). His goal is to work as a Data Engineer and work 
-                with ambitious, experienced analysts. 
-            </th>
-        </tr>
- 
-
-    </table>
-
-        <!-- Footer -->
-        <div style="margin-bottom:100px"></div>
-    
-
-        <footer>
-          <div>
-              <div>
-                  <div class="buz">
-                    <a href="#top">&lt;/mateuszbuziak&gt;</a>
-                  </div>
-                  <div>
-                   Copyright &copy; Mateusz Buziak 2022
-                  </div>
-              </div>
-          </div>
-          </footer>
-          
+<!-- FOOTER -->
+  <footer>
+    <ul>
+      <li class="end-logo">
+        &lt;/mateuszbuziak&gt;
+      </li>
+      <li>
+        Copyright &copy; Mateusz Buziak 2022
+      </li>
+    </ul>
+  </footer>
 
 </body>
 </html>

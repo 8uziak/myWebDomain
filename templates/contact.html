@@ -1,75 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mateusz Buziak</title>
+  <title>Mateusz Buziak</title>
 
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
 
 </head>
 
+<body>
 
-<body class="contact background" >
-    
-    <!-- Navbar -->
-    <nav class="topnav">
-
-        <a class="home" class="home"  href=" {{ url_for('index') }} ">Home</a>
+<!-- HEADER -->  
+  <header class="contact">
+    <ul>
+      <li class="left">
+        <a class="home" href=" {{ url_for('index') }} ">Home</a>
+      </li>
+      <li class="left">
         <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
+      </li>
+      <li class="right">
+        <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>        
+      </li>
+      <li class="right">
+        <a class="about" href=" {{ url_for('about') }} ">About</a>
+      </li>
+      <li class="mid">
+        &lt;mateuszbuziak&gt;       
+      </li>
+    </ul>
+  </header>
 
-    <nav class="topnav-middle">
-    &lt;mateuszbuziak&gt;
+<!-- ARTICLE (!) -->
+  <article class="contact">
+    Content
+  </article>
 
-
-    <nav class="topnav-right">
-        <a class="about" href=" {{ url_for('about') }} ">About me</a>
-        <a class="contact clicked" href=" {{ url_for('contact') }} ">Contact</a>
-
-    </nav>
-    </nav>
-    </nav>
-
-    <!-- Content -->
-    <table>
-        <tr>
-            <th>
-                <div style="color:F3D250; text-align: center;">&#8595; contact me &#8595;</div>
-            </th>
-
-        </tr>
-        <tr>      
-            <th>
-                <div class="center">
-                    <a class="disabled-link" href="mailto:matbuziak@gmail.com">matbuziak@gmail.com</a>
-                </div>
-            </th>
-        </tr>
-    </table>
-
-        <!-- Footer -->
-        <div style="margin-bottom:400px"></div>
-    
-
-        <footer>
-          <div>
-              <div>
-                  <div class="buz">
-                  &lt;/mateuszbuziak&gt;
-                  </div>
-                  <div>
-                   Copyright &copy; Mateusz Buziak 2022
-                  </div>
-              </div>
-          </div>
-          </footer>
-          
-    
+<!-- FOOTER -->
+  <footer>
+    <ul>
+      <li class="end-logo">
+        &lt;/mateuszbuziak&gt;
+      </li>
+      <li>
+        Copyright &copy; Mateusz Buziak 2022
+      </li>
+    </ul>
+  </footer>
 
 </body>
 </html>
