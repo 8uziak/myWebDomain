@@ -9,49 +9,38 @@
 
   <title>Mateusz Buziak</title>
 
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/404.css') }}">
 
 </head>
 
 <body>
 
-<!-- HEADER -->    
-  <header>
-    <ul>
-      <li class="left">
-        <a class="home" href=" {{ url_for('index') }} ">Home</a>
-      </li>
-      <li class="left">
-        <a class="projects" href=" {{ url_for('projects') }} ">Projects</a>
-      </li>
-      <li class="right">
-        <a class="contact" href=" {{ url_for('contact') }} ">Contact</a>        
-      </li>
-      <li class="right">
-        <a class="about" href=" {{ url_for('about') }} ">About</a>
-      </li>
-      <li class="mid">
-        &lt;mateuszbuziak&gt;       
-      </li>
-    </ul>
-  </header>
-
 <!-- ARTICLE (!) -->
   <article>
-    404
+    <div class="notfound">
+      <div class="centered"><span class="inverted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;</div>
+      <div class="centered"><span class="inverted">&nbsp;4&nbsp;0&nbsp;4&nbsp;</span><span class="shadow">&nbsp;</span></div>
+      <div class="centered"><span class="inverted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="shadow">&nbsp;</span></div>
+      <div class="centered">&nbsp;<span class="shadow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <div class="row">&nbsp;</div>
+      <div class="row"> &lt;mateuszbuziak&gt; A fatal exception 404 has occurred at C0DE:ABAD1DEA in 0xC0DEBA5E.</div>
+      <div class="row">The current request will be terminated.</div>
+      <div class="row">&nbsp;</div>
+      <div class="row">* Press any key to return to the previous page.</div>
+      <div class="row">* Press CTRL+ALT+DEL to restart your computer. You will</div>
+      <div class="row">&nbsp;&nbsp;lose any unsaved information in all applications.  &lt;/mateuszbuziak&gt;</div>
+      <div class="row">&nbsp;</div>
+      <div class="centered">Press <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a> return to the home page...<span class="blink">&#9608;</span></div>
+      <div class="centered"> <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a></div>
+      <div class="centered"> <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a></div>
+      <div class="centered"> <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a></div>
+      <div class="centered"> <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a></div>
+      <div class="centered"> <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a></div>
+      <div class="centered"> <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a></div>
+      <div class="centered"> <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a></div>
+      <div class="centered"> <a class="nostyle" href=" {{ url_for('index') }} ">&gt;&gt;Home&lt;&lt;</a></div>
+  </div>
   </article>
-
-<!-- FOOTER -->
-  <footer>
-    <ul>
-      <li class="end-logo">
-        &lt;/mateuszbuziak&gt;
-      </li>
-      <li>
-        Copyright &copy; Mateusz Buziak 2022
-      </li>
-    </ul>
-  </footer>
     
 </body>
 </html>

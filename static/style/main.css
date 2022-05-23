@@ -19,7 +19,8 @@ body {
 
 /* HEADER --TOPNAV */
 
-header { 
+header {
+  
   background:#ECECEC; 
 }
 
@@ -30,10 +31,14 @@ header ul {
   margin: 0%;
   padding: 0%;
   overflow: hidden;
+  margin-top: 7px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 header ul li.left {
 
+  
   text-align: center;
   float: left;
   font-size: 17px;
@@ -42,6 +47,7 @@ header ul li.left {
 header ul li.mid {
 
   text-align: center;
+  float:none;
   cursor: default;
   font-size: 30px;
 }
@@ -62,48 +68,59 @@ header ul li a {
   word-spacing: 30px;
 }
 
-header.home ul li a {
+header ul li a {
 
+  width: 40px;
   background-color: #ECECEC;
+  transition: width 0.25s, background-color 0.25s;
 }
 
 header.home ul li a.home {
 
+  width: 100px;
   background-color: #F78888;
 }
 
 header ul li a.home:hover {
 
+  width: 100px;
   background-color: #F78888;
 }
 
 header.projects ul li a.projects {
   
+  width: 100px;
   background-color: #F3D250;
+
 }
 
 header ul li a.projects:hover {
 
+  width: 100px;
   background-color: #F3D250;
 }
 
 header.about ul li a.about {
   
+  width: 100px;
   background-color: #90CCF4;
 }
 
 header ul li a.about:hover {
 
+  width: 100px;
   background-color: #90CCF4;
 }
 
 header.contact ul li a.contact {
-  
+
+  width: 100px;
   background-color: #5DA2D5;
 }
 
 header ul li a.contact:hover {
 
+  width: 100px;
   background-color: #5DA2D5;
 }
 
