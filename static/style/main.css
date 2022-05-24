@@ -139,6 +139,8 @@ footer {
 }
 
 footer ul {
+
+  overflow: hidden;
   text-decoration: none;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -152,7 +154,8 @@ footer ul li.end-logo {
     color:#070707;
     text-align: center;
     font-size: 30px;
-    cursor: pointer; 
+    cursor: default; 
+    margin-bottom: 0px;
 }
 
 footer ul li.copyright {
@@ -170,7 +173,9 @@ article {
 }
 
 article.home {
-  background-color: #F78888;
+  height: 100%;
+  background: linear-gradient(90deg, #F78888 33%, #F3D250 34%, #90CCF4 33%);
+  
 }
 
 article.projects {
