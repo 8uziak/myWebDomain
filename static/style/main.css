@@ -44,8 +44,9 @@ header ul li.left {
   font-size: 17px;
 }
 
-header ul li.mid {
+.mid {
 
+  place-items: center;  
   text-align: center;
   float:none;
   cursor: default;
@@ -173,9 +174,8 @@ article {
 }
 
 article.home {
-  height: 100%;
-  background: linear-gradient(90deg, #F78888 33%, #F3D250 34%, #90CCF4 33%);
   
+  background-color: #F78888;
 }
 
 article.projects {
