@@ -187,5 +187,9 @@ article.about {
 }
 
 article.contact {
+
+  display: grid;
+  place-items: center;  
+  text-align: center;
   background-color: #5DA2D5;
 }
