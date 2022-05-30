@@ -92,13 +92,13 @@ header.projects ul li a.projects {
   
   width: 100px;
   background-color: #F3D250;
-
 }
 
 header ul li a.projects:hover {
 
   width: 100px;
   background-color: #F3D250;
+
 }
 
 header.about ul li a.about {
@@ -180,6 +180,12 @@ article.home {
 
 article.projects {
   background-color: #F3D250;
+
+}
+
+article.content {
+  background-color: #F3D250;
+  height: 100vh;
 }
 
 article.about {

@@ -10,6 +10,7 @@
   <title>Mateusz Buziak</title>
 
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/projects.css') }}">
 
 </head>
 
@@ -38,21 +39,21 @@
 
 <!-- ARTICLE (!) -->  
   <article class="projects">
-    <div>
-      <div\>
+    <div >
+      <div>
         <div>
         {% for post in posts %}
-          <div>
-            <a href="{{ url_for('post', post_id=post.id) }}">
+          <div class="margin">
+            <a href="{{ url_for('post', post_id=post.id) }}" class="hiperlinks">
               <div class="title">
                 {{ post.title }}
               </div>
-              <div class="subtitle">
+              <div class="stack">
                 {{ post.subtitle }}
               </div>
               <div class="date">
                 Posted on {{ post.date_posted.strftime('%B %d, %Y') }}
-              </div>
+              </div >
             </a>
           </div>
           {% endfor %}
