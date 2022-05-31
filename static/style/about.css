@@ -1,49 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap');
 
-.title-word {
-  animation: color-animation 4s linear infinite;
-}
 
-.title-word-1 {
-  --color-1: #F78888;
-  --color-2: #F3D250;
-  --color-3: #5DA2D5;
-}
 
-.title-word-2 {
-  --color-1: #F3D250;
-  --color-2: #F78888;
-  --color-3: #5DA2D5;
-}
 
-.title-word-3 {
-  --color-1: #F3D250;
-  --color-2: #5DA2D5;
-  --color-3: #F78888;
-}
 
-@keyframes color-animation {
-  0%    {color: var(--color-1)}
-  32%   {color: var(--color-1)}
-  33%   {color: var(--color-2)}
-  65%   {color: var(--color-2)}
-  66%   {color: var(--color-3)}
-  99%   {color: var(--color-3)}
-  100%  {color: var(--color-1)}
-}
-
-/* Here are just some visual styles. 🖌 */
-
-.container {
-  display: grid;
-  place-items: center;  
-  text-align: center;
-  height: 100vh
-}
-
-.title {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 800;
-  font-size: 8.5vw;
-  text-transform: uppercase;
-}

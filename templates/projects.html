@@ -39,11 +39,9 @@
 
 <!-- ARTICLE (!) -->  
   <article class="projects">
-    <div >
-      <div>
-        <div>
+    <div class="margin-top">
         {% for post in posts %}
-          <div class="margin">
+          <section>
             <a href="{{ url_for('post', post_id=post.id) }}" class="hiperlinks">
               <div class="title">
                 {{ post.title }}
@@ -55,10 +53,8 @@
                 Posted on {{ post.date_posted.strftime('%B %d, %Y') }}
               </div >
             </a>
-          </div>
+          </section>
           {% endfor %}
-        </div>
-      </div>
     </div>
   </article>
 
