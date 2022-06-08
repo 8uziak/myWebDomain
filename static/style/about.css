@@ -2,5 +2,34 @@
 
 
 
+article {
+  
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.center {
 
+    
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.text {
+    
+    text-align: left;
+    font-size: 35px;
+}
+
+.enter {
+
+    margin-top: 5px;
+}
+
+.question {
+
+    font-weight: 800;
+}
