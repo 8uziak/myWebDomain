@@ -2,16 +2,17 @@ from ast import Pass
 from flask import Flask, redirect, url_for, request, render_template
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from flask_login import LoginManager , UserMixin, login_required, login_user
 
 
 app = Flask(__name__)
-
+# app.secret_key = '#$%RFgfvfvgtredsGFTRDFcxdsrFgfBfdzsadfCVGVde#eR56tR4#eR56Y&' 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bsqvfgacavyfil:53967cd0e2c8dabdb84436d2cd47845446c3d9db315ea4e565621b8bcdf1d80f@ec2-52-48-159-67.eu-west-1.compute.amazonaws.com:5432/ddakukmsu6ma2m'
 
-db = SQLAlchemy(app)
 
+db = SQLAlchemy(app)
 
 class Blogpost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -39,6 +40,7 @@ def post(post_id):
     return render_template('content.html', post=post)
 
 @app.route('/add')
+@login_required
 def add():
     return render_template('add.html')
 

@@ -11,6 +11,11 @@ article {
     align-items: center;
 }
 
+
+div {
+
+    cursor: default;
+}
 .center {
 
     
@@ -32,4 +37,19 @@ article {
 .question {
 
     font-weight: 800;
+}
+
+.hyperlink {
+
+    color: #F3D250;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+.hyperlink:hover {
+
+    text-decoration: none;
+    color: #ECECEC;
+    cursor: pointer;
 }
