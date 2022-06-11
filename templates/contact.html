@@ -43,11 +43,16 @@
       <div class="contact-text">
         Contact
       </div>
-      <form>      
+      {% if success %}
+        <div>
+          Mail sent
+        </div>
+      {% endif %}
+      <form method="POST">      
         <input name="name" type="text" class="feedback-input" placeholder="Name" />   
         <input name="email" type="text" class="feedback-input" placeholder="Email" />
-        <textarea name="text" class="feedback-input" placeholder="Text"></textarea>
-        <input type="submit" value="SUBMIT"/>
+        <textarea name="message" class="feedback-input" placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
       </form>
     </div>
   </article>
