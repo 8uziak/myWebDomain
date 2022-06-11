@@ -48,7 +48,7 @@
           Mail sent
         </div>
       {% endif %}
-      <form method="POST">      
+      <form action="{{ url_for('contact_sent') }}" method="POST">      
         <input name="name" type="text" class="feedback-input" placeholder="Name" />   
         <input name="email" type="text" class="feedback-input" placeholder="Email" />
         <textarea name="message" class="feedback-input" placeholder="Message"></textarea>

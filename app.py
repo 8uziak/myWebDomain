@@ -12,22 +12,22 @@ load_dotenv()
 
 app = Flask(__name__)
 admin = Admin(app)
-mail = Mail(app)
+
 
 # DATABASE Configuration
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bsqvfgacavyfil:53967cd0e2c8dabdb84436d2cd47845446c3d9db315ea4e565621b8bcdf1d80f@ec2-52-48-159-67.eu-west-1.compute.amazonaws.com:5432/ddakukmsu6ma2m'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret"
 db = SQLAlchemy(app)
 
-app.config["MAIL_SERVER"] = "smtp-mail.outlook.com "
-app.config["MAIL_PORT"] = 465
-app.config["MAIL_USE_TLS"] = True
-app.config["MAIL_USE_SSL"] = False  
-app.config["MAIL_USERNAME"] = os.getenv("mail_user_name") 
-app.config["MAIL_PASSWORD"] = os.getenv("mail_user_password") 
-
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bsqvfgacavyfil:53967cd0e2c8dabdb84436d2cd47845446c3d9db315ea4e565621b8bcdf1d80f@ec2-52-48-159-67.eu-west-1.compute.amazonaws.com:5432/ddakukmsu6ma2m'
+app.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True   
+app.config['MAIL_USE_SSL'] = False  
+app.config['MAIL_USERNAME'] = os.getenv("mail_user_name")
+app.config['MAIL_PASSWORD'] = os.getenv("mail_user_password")
+mail = Mail(app)
 
 
 class Blogpost(db.Model):
@@ -102,19 +102,27 @@ def addproject():
 def about():
     return render_template("about.html")
 
-@app.route("/contact", methods=['GET','POST'])
+
+# contact form with handling sending emails (obviously)
+@app.route("/contact")
 def contact():
+    
+    return render_template("contact.html")
+
+@app.route("/contactsent", methods=['GET','POST'])
+def contact_sent():
     if request.method == "POST":
-        name = request.form.get('name')
-        email = request.form.get('email')
-        message = request.form.get('message')
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
 
         msg = Message(subject=f"Message from {name}, email: {email}", body=message, sender=os.getenv("mail_user_name") , recipients=["matbuziak@gmail.com"])
         mail.send(msg)
-        return render_template("contact.html", success=True)
-    return render_template("contact.html")
+        return render_template("contact.html",success=True)
 
 
+
+# 404 error after placing different combination of numbers and/or letters after "/"
 @app.errorhandler(404)
 def not_found(e):
     return render_template("404.html")
