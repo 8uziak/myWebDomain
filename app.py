@@ -15,10 +15,11 @@ admin = Admin(app)
 
 
 # DATABASE Configuration
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bsqvfgacavyfil:53967cd0e2c8dabdb84436d2cd47845446c3d9db315ea4e565621b8bcdf1d80f@ec2-52-48-159-67.eu-west-1.compute.amazonaws.com:5432/ddakukmsu6ma2m'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'ompute.amazonaws.com:5432/ddakukmsu6ma2m'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
+app.config['SQLALCHEMY_BINDS'] = {'about' : 'sqlite:///about.db'}
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret"
+app.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret" # in progress
 db = SQLAlchemy(app)
 
 app.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
@@ -37,6 +38,12 @@ class Blogpost(db.Model):
     date_posted = db.Column(db.DateTime)
     content = db.Column(db.Text)
 
+class AboutDB(db.Model):
+    __bind_key__ = 'about'
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text)
+
+
 class SecureModelView(ModelView):
     def is_accessible(self):
         if "logged_in" in session:
@@ -44,7 +51,9 @@ class SecureModelView(ModelView):
         else:
             abort(403)
 
+
 admin.add_view(SecureModelView(Blogpost, db.session))
+admin.add_view(SecureModelView(AboutDB, db.session))
 
 # login to get access to ADMIN functionalities 
 @app.route('/login', methods=['GET','POST'])
@@ -98,10 +107,18 @@ def addproject():
 
     return redirect(url_for('projects'))
 
+
+
 @app.route("/about")
 def about():
-    return render_template("about.html")
 
+    post_about = AboutDB.query.all()
+
+    return render_template("about.html", post_about=post_about)
+
+@app.route("/aboutedit")
+def aboutedit():
+    return render_template("about.html")
 
 # contact form with handling sending emails (obviously)
 @app.route("/contact")

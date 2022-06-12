@@ -41,18 +41,11 @@
   <article class="about">
     <div class="center">
       <div class="text">
-        <div class="question">
-          Who am I?
-        </div>
-        <div>
-          I am a curious person who is able to learn quickly and learn new technologies. 
-          Professionally, I work analyzing data for quality as a Data Operation Specialist. Discipline and passion for finding new solutions, 
-          as well as a love of order make me well versed in many areas of computer science. I am proficient in Python, 
-          SQL, Tableau, Excel, and the R programming language. I regularly work on various projects in Python, the results 
-          of which can be seen on <a class="hyperlink" href="#xd">GitHub</a>  and on this site under the <i><a  class="hyperlink" href=" {{ url_for('projects') }} ">projects</a></i> 
-          tab. My goal is to work as a Data Engineer and 
-          collaborate with ambitious, experienced analysts.
-        </div>
+        {% for post in post_about %}
+            <div>
+              {{ post.content }}
+            </div>
+        {% endfor %}
       </div>
     </div>
   </article>
