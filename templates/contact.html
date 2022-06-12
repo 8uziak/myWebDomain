@@ -39,19 +39,22 @@
 
 <!-- ARTICLE (!) -->
   <article class="contact">
+
+    {% if success %}
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      Success! Your message has been sent.
+    </div>
+    {% endif %}
+    
     <div class="margin-top">
       <div class="contact-text">
         Contact
       </div>
-      {% if success %}
-        <div>
-          Mail sent
-        </div>
-      {% endif %}
       <form action="{{ url_for('contact_sent') }}" method="POST">      
-        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-        <input name="email" type="text" class="feedback-input" placeholder="Email" />
-        <textarea name="message" class="feedback-input" placeholder="Message"></textarea>
+        <input name="name" type="text" class="feedback-input" placeholder="Name" required/>   
+        <input name="email" type="text" class="feedback-input" placeholder="Email" required/>
+        <textarea name="message" class="feedback-input" placeholder="Message" required></textarea>
         <button type="submit">Submit</button>
       </form>
     </div>
