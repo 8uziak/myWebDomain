@@ -123,7 +123,6 @@ def aboutedit():
 # contact form with handling sending emails (obviously)
 @app.route("/contact")
 def contact():
-    
     return render_template("contact.html")
 
 @app.route("/contactsent", methods=['GET','POST'])
@@ -138,6 +137,10 @@ def contact_sent():
         return render_template("contact.html",success=True)
 
 
+# 403 error handler after trying to access admin page without loging in
+@app.errorhandler(403)
+def access_forbidden(e):
+    return redirect("/logout", code=302)
 
 # 404 error after placing different combination of numbers and/or letters after "/"
 @app.errorhandler(404)

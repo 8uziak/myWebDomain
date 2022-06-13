@@ -5,20 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/contact.css') }}">
 </head>
 <body>
-    <form method="POST">
-        <h1>LOGIN</h1>
-        <h2>Admin only</h2>
-        <input type="username" placeholder="username" name="username" required/>
-        <input type="password" placeholder="password" name="password" required/>
-        <button type="submit">submit</button>
+    <article class="contact">
+        <div class="margin-top">
+            <form method="POST">
+                <h1>LOGIN</h1>
+                <h2>ADMIN PANEL</h2>
+                <input type="username" class="feedback-input" placeholder="username" name="username" required/>
+                <input type="password" class="feedback-input" placeholder="password" name="password" required/>
+                <button type="submit">submit</button>
 
-        {% if failed %}
-        <div style="color:red">
-            Incorrect, try again
+                {% if failed %}
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    Incorrect, try again.
+                  </div>
+                {% endif %}
+            </form>
         </div>
-        {% endif %}
-    </form>
+    </article>
 </body>
 </html>
