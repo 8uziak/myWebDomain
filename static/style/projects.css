@@ -19,6 +19,11 @@ article {
     color: black;
     
 }
+.hiperlinks:hover {
+
+    color: rgb(141, 140, 140);
+    
+}
 
 .title {
 

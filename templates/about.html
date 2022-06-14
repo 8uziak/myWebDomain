@@ -42,8 +42,8 @@
     <div class="center">
       <div class="text">
         {% for post in post_about %}
-            <div>
-              {{ post.content }}
+            <div class="margin">
+              {{ post.content|safe }}
             </div>
         {% endfor %}
       </div>
