@@ -149,4 +149,4 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-    application.run(debug=True)
+    application.run(debug=False)
