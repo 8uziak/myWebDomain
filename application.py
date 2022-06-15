@@ -10,25 +10,25 @@ import os
 
 load_dotenv()
 
-app = Flask(__name__)
-admin = Admin(app)
+application = Flask(__name__)
+admin = Admin(application)
 
 
 # DATABASE Configuration
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'ompute.amazonaws.com:5432/ddakukmsu6ma2m'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
-app.config['SQLALCHEMY_BINDS'] = {'about' : 'sqlite:///about.db'}
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret" # in progress
-db = SQLAlchemy(app)
+application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
+application.config['SQLALCHEMY_BINDS'] = {'about' : 'sqlite:///about.db'}
+application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+application.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret" # in progress
+db = SQLAlchemy(application)
 
-app.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True   
-app.config['MAIL_USE_SSL'] = False  
-app.config['MAIL_USERNAME'] = os.getenv("mail_user_name")
-app.config['MAIL_PASSWORD'] = os.getenv("mail_user_password")
-mail = Mail(app)
+application.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
+application.config['MAIL_PORT'] = 587
+application.config['MAIL_USE_TLS'] = True   
+application.config['MAIL_USE_SSL'] = False  
+application.config['MAIL_USERNAME'] = os.getenv("mail_user_name")
+application.config['MAIL_PASSWORD'] = os.getenv("mail_user_password")
+mail = Mail(application)
 
 
 class Blogpost(db.Model):
@@ -56,7 +56,7 @@ admin.add_view(SecureModelView(Blogpost, db.session))
 admin.add_view(SecureModelView(AboutDB, db.session))
 
 # login to get access to ADMIN functionalities 
-@app.route('/login', methods=['GET','POST'])
+@application.route('/login', methods=['GET','POST'])
 def login():
     if request.method == "POST":
         if request.form.get("username") == os.getenv("admin_page_login") and request.form.get("password") == os.getenv("admin_page_password"):
@@ -67,7 +67,7 @@ def login():
 
     return render_template("login.html")
 
-@app.route('/logout')
+@application.route('/logout')
 def logout():
     session.clear()
     return redirect("login")
@@ -75,18 +75,18 @@ def logout():
 
 
 # user accessible routes 
-@app.route("/")
+@application.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/projects")
+@application.route("/projects")
 def projects():
 
     posts = Blogpost.query.order_by(Blogpost.date_posted.desc()).all()
 
     return render_template("projects.html", posts=posts)
 
-@app.route('/projects/<int:post_id>')
+@application.route('/projects/<int:post_id>')
 def post(post_id):
     
     post = Blogpost.query.filter_by(id=post_id).one()
@@ -94,7 +94,7 @@ def post(post_id):
     return render_template('content.html', post=post)
 
 
-@app.route('/addproject', methods=['POST'])
+@application.route('/addproject', methods=['POST'])
 def addproject():
     title = request.form['title']
     subtitle = request.form['subtitle']
@@ -109,23 +109,23 @@ def addproject():
 
 
 
-@app.route("/about")
+@application.route("/about")
 def about():
 
     post_about = AboutDB.query.all()
 
     return render_template("about.html", post_about=post_about)
 
-@app.route("/aboutedit")
+@application.route("/aboutedit")
 def aboutedit():
     return render_template("about.html")
 
 # contact form with handling sending emails (obviously)
-@app.route("/contact")
+@application.route("/contact")
 def contact():
     return render_template("contact.html")
 
-@app.route("/contactsent", methods=['GET','POST'])
+@application.route("/contactsent", methods=['GET','POST'])
 def contact_sent():
     if request.method == "POST":
         name = request.form['name']
@@ -138,15 +138,15 @@ def contact_sent():
 
 
 # 403 error handler after trying to access admin page without loging in
-@app.errorhandler(403)
+@application.errorhandler(403)
 def access_forbidden(e):
     return redirect("/logout", code=302)
 
 # 404 error after placing different combination of numbers and/or letters after "/"
-@app.errorhandler(404)
+@application.errorhandler(404)
 def not_found(e):
     return render_template("404.html")
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    application.run(debug=True)
