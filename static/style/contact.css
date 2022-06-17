@@ -68,9 +68,15 @@ textarea {
 }
 
 /* -- Alert after sending the message -- */
-.alert {
+.alertCorrect {
   padding: 20px;
   background-color: #51CB20;
+  color: #ECECEC;
+}
+
+.alertWrong {
+  padding: 20px;
+  background-color: red;
   color: #ECECEC;
 }
 
@@ -88,3 +94,4 @@ textarea {
 .closebtn:hover {
   color: black;
 }
+

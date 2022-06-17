@@ -5,7 +5,9 @@ from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
+from validate_email import validate_email
 import os
+
 
 
 load_dotenv()
@@ -127,12 +129,23 @@ def contact():
 
 @application.route("/contactsent", methods=['GET','POST'])
 def contact_sent():
+
+
     if request.method == "POST":
         name = request.form['name']
         email = request.form['email']
         message = request.form['message']
 
-        msg = Message(subject=f"Message from {name}, email: {email}", body=message, sender=os.getenv("mail_user_name") , recipients=["matbuziak@gmail.com"])
+        # validates email addresses 
+        is_valid = validate_email(f'{email}')
+        if not is_valid: 
+            return render_template("contact.html",success=False)
+
+
+        msg = Message(subject=f"Message from {name}, email: {email}", sender=os.getenv("mail_user_name") , recipients=["matbuziak@gmail.com"])
+
+        msg.html = f"<h1 style='margin-left:20px'>{message}</h1>" #tbc
+
         mail.send(msg)
         return render_template("contact.html",success=True)
 
