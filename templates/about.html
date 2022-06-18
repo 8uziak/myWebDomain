@@ -46,11 +46,25 @@
   <article class="about">
     <div class="center">
       <div class="text">
+       <div class="textbox">
         {% for post in post_about %}
-            <div class="margin">
-              {{ post.content|safe }}
-            </div>
+          <div class="margin">
+            {{ post.content|safe }}
+          </div>
         {% endfor %}
+        <div class="g">
+          <div class="mg">
+            <a href="https://github.com/8uziak" target="_blank">
+              <img src="https://mybuckettomakeusmile.s3.eu-central-1.amazonaws.com/github.png" alt="github" />
+            </a>
+          </div>
+          <div class="mg">
+            <a href="https://www.linkedin.com/in/mateusz-buziak/" target="_blank">
+              <img src="https://mybuckettomakeusmile.s3.eu-central-1.amazonaws.com/li.jfif" alt="linkedin" />
+            </a>
+          </div>
+        </div>
+       </div>
       </div>
     </div>
   </article>

@@ -139,7 +139,7 @@ def contact_sent():
         # validates email addresses 
         is_valid = validate_email(f'{email}')
         if not is_valid: 
-            return render_template("contact.html",success=False)
+            return render_template("contact.html", fail=True)
 
 
         msg = Message(subject=f"Message from {name}, email: {email}", sender=os.getenv("mail_user_name") , recipients=["matbuziak@gmail.com"])
