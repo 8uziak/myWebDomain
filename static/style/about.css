@@ -75,6 +75,18 @@ div {
 .mg img {
 
     border-radius: 7.5px;
-    width: 60x;
-    height: 60px;
+    width: 55px;
+    height: 55px;
+    -webkit-transform: scale(1.10);
+	transform: scale(1.10);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.mg img:hover{
+
+    width: 55px;
+    height: 55px;
+    -webkit-transform: scale(1);
+	transform: scale(1);
 }
