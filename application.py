@@ -7,7 +7,8 @@ from flask_mail import Mail, Message
 from dotenv import load_dotenv
 from validate_email import validate_email
 import os
-
+from flask_mysqldb import MySQL
+import pymysql #mysql+pymysql for sqlalchemy to connect to aws
 
 
 load_dotenv()
@@ -17,12 +18,26 @@ admin = Admin(application)
 
 
 # DATABASE Configuration
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'ompute.amazonaws.com:5432/ddakukmsu6ma2m'
-application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
-application.config['SQLALCHEMY_BINDS'] = {'about' : 'sqlite:///about.db'}
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://{master username}:{db password}@{endpoint}/{db instance name}'
+#application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
+#application.config['SQLALCHEMY_BINDS'] = {'about' : 'sqlite:///about.db'}
+#application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+
+# application.config['MYSQL_HOST'] = ''
+# application.config['MYSQL_USER'] = ''
+# application.config['MYSQL_PASSWORD'] = ''
+# application.config['MYSQL_DB'] = ''
+
+# application.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret" # in progress
+
+application.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("aws_rds")
+application.config['SQLALCHEMY_BINDS'] = {'about' : os.getenv("aws_rds")}
+application.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret"
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-application.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret" # in progress
+
 db = SQLAlchemy(application)
+
 
 application.config['MAIL_SERVER'] = "smtp-mail.outlook.com"
 application.config['MAIL_PORT'] = 587
@@ -33,14 +48,15 @@ application.config['MAIL_PASSWORD'] = os.getenv("mail_user_password")
 mail = Mail(application)
 
 
-class Blogpost(db.Model):
+
+class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50))
     subtitle = db.Column(db.String(50))
     date_posted = db.Column(db.DateTime)
     content = db.Column(db.Text)
 
-class AboutDB(db.Model):
+class About(db.Model):
     __bind_key__ = 'about'
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.Text)
@@ -54,8 +70,8 @@ class SecureModelView(ModelView):
             abort(403)
 
 
-admin.add_view(SecureModelView(Blogpost, db.session))
-admin.add_view(SecureModelView(AboutDB, db.session))
+admin.add_view(SecureModelView(Project, db.session))
+admin.add_view(SecureModelView(About, db.session))
 
 # login to get access to ADMIN functionalities 
 @application.route('/login', methods=['GET','POST'])
@@ -84,14 +100,14 @@ def index():
 @application.route("/projects")
 def projects():
 
-    posts = Blogpost.query.order_by(Blogpost.date_posted.desc()).all()
+    posts = Project.query.order_by(Project.date_posted.desc()).all()
 
     return render_template("projects.html", posts=posts)
 
 @application.route('/projects/<int:post_id>')
 def post(post_id):
     
-    post = Blogpost.query.filter_by(id=post_id).one()
+    post = Project.query.filter_by(id=post_id).one()
 
     return render_template('content.html', post=post)
 
@@ -102,7 +118,7 @@ def addproject():
     subtitle = request.form['subtitle']
     content = request.form['content']
 
-    post = Blogpost(title=title, subtitle=subtitle, content=content, date_posted=datetime.now())
+    post = Project(title=title, subtitle=subtitle, content=content, date_posted=datetime.now())
 
     db.session.add(post)
     db.session.commit()
@@ -114,7 +130,7 @@ def addproject():
 @application.route("/about")
 def about():
 
-    post_about = AboutDB.query.all()
+    post_about = About.query.all()
 
     return render_template("about.html", post_about=post_about)
 
