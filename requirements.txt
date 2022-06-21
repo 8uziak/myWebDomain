@@ -12,7 +12,6 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 MarkupSafe==2.1.1
 mysql-client==0.0.1
-mysqlclient==2.1.0
 PyMySQL==1.0.2
 python-dotenv==0.20.0
 SQLAlchemy==1.4.37
