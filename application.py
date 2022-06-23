@@ -10,26 +10,10 @@ import os
 from flask_mysqldb import MySQL
 import pymysql #mysql+pymysql for sqlalchemy to connect to aws
 
-
 load_dotenv()
 
 application = Flask(__name__)
 admin = Admin(application)
-
-
-# DATABASE Configuration
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://{master username}:{db password}@{endpoint}/{db instance name}'
-#application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
-#application.config['SQLALCHEMY_BINDS'] = {'about' : 'sqlite:///about.db'}
-#application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-
-# application.config['MYSQL_HOST'] = ''
-# application.config['MYSQL_USER'] = ''
-# application.config['MYSQL_PASSWORD'] = ''
-# application.config['MYSQL_DB'] = ''
-
-# application.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret" # in progress
 
 application.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("aws_rds")
 application.config['SQLALCHEMY_BINDS'] = {'about' : os.getenv("aws_rds")}
@@ -45,6 +29,7 @@ application.config['MAIL_USE_TLS'] = True
 application.config['MAIL_USE_SSL'] = False  
 application.config['MAIL_USERNAME'] = os.getenv("mail_user_name")
 application.config['MAIL_PASSWORD'] = os.getenv("mail_user_password")
+
 mail = Mail(application)
 
 
@@ -70,8 +55,10 @@ class SecureModelView(ModelView):
             abort(403)
 
 
+
 admin.add_view(SecureModelView(Project, db.session))
 admin.add_view(SecureModelView(About, db.session))
+
 
 # login to get access to ADMIN functionalities 
 @application.route('/login', methods=['GET','POST'])
@@ -110,21 +97,6 @@ def post(post_id):
     post = Project.query.filter_by(id=post_id).one()
 
     return render_template('content.html', post=post)
-
-
-@application.route('/addproject', methods=['POST'])
-def addproject():
-    title = request.form['title']
-    subtitle = request.form['subtitle']
-    content = request.form['content']
-
-    post = Project(title=title, subtitle=subtitle, content=content, date_posted=datetime.now())
-
-    db.session.add(post)
-    db.session.commit()
-
-    return redirect(url_for('projects'))
-
 
 
 @application.route("/about")
