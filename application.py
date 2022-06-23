@@ -33,7 +33,7 @@ admin = Admin(application)
 
 application.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("aws_rds")
 application.config['SQLALCHEMY_BINDS'] = {'about' : os.getenv("aws_rds")}
-application.config['SECRET_KEY'] = "mysecretkeywhichissupposedtobesecret"
+application.config['SECRET_KEY'] = os.getenv("secret_key")
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(application)
