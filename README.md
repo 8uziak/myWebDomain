@@ -23,6 +23,7 @@ My plans still include:
 - [x] adding SSL certificate (in progress - AWS Certification Menager)
 - [ ] adding more variety to the website (maybe JavaScript?)
 - [ ] constantly adding new projects
+- [ ] adding mobile version(s)?
 
 ## Author
 
