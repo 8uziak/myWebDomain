@@ -18,7 +18,7 @@ The website was created using the python 3.8.5 programming language (Flask among
 
 My plans still include:
 
-- [x] buying domenta (check - www.mateuszbuziak.com has been bought)
+- [x] buying domenta (check - [www.mateuszbuziak.com](http://flaskapp-env.eba-n8tvkubx.eu-central-1.elasticbeanstalk.com) has been bought)
     - [ ] implementing it
 - [x] adding SSL certificate (in progress - AWS Certification Menager)
 - [ ] adding more variety to the website (maybe JavaScript?)
