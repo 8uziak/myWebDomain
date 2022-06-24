@@ -24,6 +24,7 @@ My plans still include:
 - [ ] adding more variety to the website (maybe JavaScript?)
 - [ ] constantly adding new projects
 - [ ] adding mobile version(s)?
+- [ ] sending confirmation mail to sender after filling mail form 
 
 ## Author
 
