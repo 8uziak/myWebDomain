@@ -8,7 +8,7 @@ The website has many interactive elements such as text appearing on the main pag
 
 ## Stack
 
-The website was created using the python 3.8.5 programming language (Flask among others), HTML5 and CSS. I used AWS (Amazon Web Services) to deploy the website to the web: Elastic Beanstalk, S3, RDS, Route 53, CodePipeline.
+The website was created using the python 3.8.5 programming language (for instance Flask), HTML5 and CSS. I used AWS (Amazon Web Services) to deploy the website to the web: Elastic Beanstalk, S3, RDS, Route 53, CodePipeline.
 
 ## Link
 
