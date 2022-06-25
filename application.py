@@ -12,6 +12,8 @@ import pymysql #mysql+pymysql for sqlalchemy to connect to aws
 
 load_dotenv()
 
+
+# setting up the application
 application = Flask(__name__)
 admin = Admin(application)
 
@@ -33,7 +35,7 @@ application.config['MAIL_PASSWORD'] = os.getenv("mail_user_password")
 mail = Mail(application)
 
 
-
+# tables 
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50))
@@ -47,6 +49,7 @@ class About(db.Model):
     content = db.Column(db.Text)
 
 
+# secure view
 class SecureModelView(ModelView):
     def is_accessible(self):
         if "logged_in" in session:
@@ -55,7 +58,7 @@ class SecureModelView(ModelView):
             abort(403)
 
 
-
+#admin page (secure)
 admin.add_view(SecureModelView(Project, db.session))
 admin.add_view(SecureModelView(About, db.session))
 
@@ -79,42 +82,50 @@ def logout():
 
 
 
-# user accessible routes 
+# user accessible routes
+# home page
 @application.route("/")
 def index():
     return render_template("index.html")
 
+# projects page
 @application.route("/projects")
 def projects():
-
+    
+    # takes proper rows and collums from the Project table and loads it in descending order
+    # it's content is editable via admin page (login required)
     posts = Project.query.order_by(Project.date_posted.desc()).all()
 
     return render_template("projects.html", posts=posts)
 
+# project's content 
 @application.route('/projects/<int:post_id>')
 def post(post_id):
     
+    # takes proper rows from content collum from the Project table and loads it 
+    # it's content is editable via admin page (login required)
     post = Project.query.filter_by(id=post_id).one()
 
     return render_template('content.html', post=post)
 
-
+# about page
 @application.route("/about")
 def about():
 
+    # takes proper rows from content collum from the About table and loads it 
+    # it's content is editable via admin page (login required)
     post_about = About.query.all()
 
     return render_template("about.html", post_about=post_about)
 
-@application.route("/aboutedit")
-def aboutedit():
-    return render_template("about.html")
 
-# contact form with handling sending emails (obviously)
+# contact form page
 @application.route("/contact")
 def contact():
     return render_template("contact.html")
 
+# contact form's skeleton 
+# 
 @application.route("/contactsent", methods=['GET','POST'])
 def contact_sent():
 
@@ -130,8 +141,15 @@ def contact_sent():
             return render_template("contact.html", fail=True)
 
 
+        # confirmation messege to the sender
+        # TO DO ! 
+        # space to do this 
+
+        # messege to the owner of the website 
         msg = Message(subject=f"Message from {name}, email: {email}", sender=os.getenv("mail_user_name") , recipients=["matbuziak@gmail.com"])
 
+        # styling the messege
+        # better styling TO DO !
         msg.html = f"<h1 style='margin-left:20px'>{message}</h1>" #tbc
 
         mail.send(msg)
