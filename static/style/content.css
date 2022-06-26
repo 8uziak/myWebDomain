@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap');
+
+.contentplus{
+  
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+.center {
+
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.text {
+    
+    text-align: center;
+    font-size: 27px;
+}
+
+.textbox {
+    
+    background-color: #ECECEC;
+    border-radius: 5px;
+    max-width: 1000px;
+    padding: 50px;
+    border: 50px;
+}
+
+.justify {
+
+    text-align: justify;
+}

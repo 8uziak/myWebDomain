@@ -38,8 +38,8 @@ mail = Mail(application)
 # tables 
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(50))
-    subtitle = db.Column(db.String(50))
+    title = db.Column(db.String(60))
+    subtitle = db.Column(db.String(150))
     date_posted = db.Column(db.DateTime)
     content = db.Column(db.Text)
 

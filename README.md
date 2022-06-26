@@ -8,19 +8,20 @@ The website has many interactive elements such as text appearing on the main pag
 
 ## Stack
 
-The website was created using the python 3.8.5 programming language (mainly Flask), HTML5 and CSS. I used AWS (Amazon Web Services) to deploy the website to the web: Elastic Beanstalk, S3, RDS, Route 53, CodePipeline. I used MySQL Workbench 8.0 to create the tables and to check the connection to the server.
+The website was created using the **Python 3.8.5** programming language (mainly **Flask**), **HTML5** and **CSS**. I used **AWS (Amazon Web Services) to deploy the website to the web: Elastic Beanstalk, S3, RDS, EC2, Route 53, CodePipeline, Certificate Manager**. I used **MySQL Workbench 8.0** to create the tables and to check the connection to the server.
 
 ## Link
 
--> [www.mateuszbuziak.com](http://flaskapp-env.eba-n8tvkubx.eu-central-1.elasticbeanstalk.com)
+-> [www.mateuszbuziak.com](www.mateuszbuziak.com)
 
 ## Roadmap
 
 My plans still include:
 
-- [x] buying domenta (check - [www.mateuszbuziak.com](http://flaskapp-env.eba-n8tvkubx.eu-central-1.elasticbeanstalk.com) has been bought)
-    - [ ] implementing it
-- [x] adding SSL certificate (in progress - AWS Certification Menager)
+- [x] buying domenta (check - [www.mateuszbuziak.com](www.mateuszbuziak.com) has been bought)
+    - [x] implementing it (it's live!)
+- [x] adding SSL certificate
+    - [x] it's working and typing url basic url (http) redirects to https (thanks to EC2)
 - [ ] adding more variety to the website (maybe JavaScript?)
 - [ ] constantly adding new projects
 - [ ] adding mobile version(s)?

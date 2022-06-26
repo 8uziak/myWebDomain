@@ -2,7 +2,13 @@
 
 
 
-article {
+
+div {
+
+    cursor: default;
+}
+
+.centercenter {
   
     height: 100vh;
     display: flex;
@@ -10,13 +16,6 @@ article {
     justify-content: center;
     align-items: center;
 }
-
-
-div {
-
-    cursor: default;
-}
-
 
 .center {
 

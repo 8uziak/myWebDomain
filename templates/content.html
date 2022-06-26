@@ -10,6 +10,7 @@
   <title>Mateusz Buziak</title>
 
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/main.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style/content.css') }}">
 
   <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='/favicon/apple-touch-icon.png') }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='/favicon/favicon-32x32.png') }}">
@@ -43,7 +44,15 @@
 
 <!-- ARTICLE (!) -->
   <article class="content">
-    {{ post.content|safe }}
+    <div class="contentplus">
+    <div class="center">
+      <div class="text">
+        <div class="textbox">
+          {{ post.content|safe }}
+        </div>
+      </div>
+    </div>
+  </div>
   </article>
   
 
