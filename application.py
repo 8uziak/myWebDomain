@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from validate_email import validate_email
 import os
 from flask_mysqldb import MySQL
-import pymysql #mysql+pymysql for sqlalchemy to connect to aws
+import pymysql #mysql+pymysql for sqlalchemy to connect to AWS
 
 load_dotenv()
 
@@ -125,7 +125,6 @@ def contact():
     return render_template("contact.html")
 
 # contact form's skeleton 
-# 
 @application.route("/contactsent", methods=['GET','POST'])
 def contact_sent():
 
@@ -168,5 +167,4 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-
     application.run()

@@ -1,10 +1,10 @@
 ﻿# myWebDomain (fullstack)
 
-myWebDomain - is my personal website which I built by myself with the idea of publishing my projects. After some time I liked this project so much that I decided to turn it into my personal website.
+**myWebDomain** - is my personal website which I built by myself with the idea of publishing my projects. After some time I liked this project so much that I decided to turn it into my personal website.
 
 ## Features
 
-The website has many interactive elements such as text appearing on the main page, links reacting on mouse hovers, possibility of sending messages to me using the contact form, favicon icon, special tab for the administrator which has the possibility of modifying the content on the visible website for everyone (projects, about). To the website are connected two relational databases with AWS RDS. For me as a developer the coolest feature is the use of CI/CD in this project. Using the code deployment on Github - AWS CodePipeline automatically detects the change and communicates the code deployment to AWS Elastic Beanstalk (SO COOL!). 
+The website has many interactive elements such as text appearing on the main page, links reacting on mouse hovers, possibility of sending messages to me using the contact form, favicon icon, special tab for the administrator which has the possibility of modifying the content on the visible website for everyone (projects, about). To the website are connected two relational databases with AWS RDS. For me as a developer the coolest feature is the use of CI/CD in this project. Using the code deployment on Github - AWS CodePipeline automatically detects the change and communicates the code deployment to AWS Elastic Beanstalk *(SO COOL!)*. 
 
 ## Stack
 
@@ -26,6 +26,7 @@ My plans still include:
 - [ ] constantly adding new projects
 - [ ] adding mobile version(s)?
 - [ ] sending confirmation mail to sender after filling mail form 
+- [ ] SEO
 
 ## Author
 
