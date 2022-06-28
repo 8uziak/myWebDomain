@@ -2,17 +2,20 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 10px;
-    background-color: #000084;
-    color: #bbb;
-    font-family: 'more_perfect_dos_vgaregular', 'Courier New', monospace;
-    font-size: 10px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+    body {
+        margin: 10px;
+        background-color: #000084;
+        color: #bbb;
+        font-family: 'more_perfect_dos_vgaregular', 'Courier New', monospace;
+        font-size: 10px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+    }
+
 
 @media (min-width: 600px) {
     body {

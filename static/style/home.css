@@ -10,14 +10,30 @@ article {
   align-items: center;
 }
 
-h1 {
+@media only screen and (max-width:320px) {
+  h1 {
 
-  font-family: 'Oswald', sans-serif;
-  max-width: 110vh;
-  font-size: 75px;
-  text-align: center;
-  transform: scale(0.94);
-  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    font-family: 'Oswald', sans-serif;
+    max-width: 300px;
+    font-size: 30px;
+    text-align: center;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+
+  }
+}
+
+@media only screen and (min-width:321px) {
+  h1 {
+
+    font-family: 'Oswald', sans-serif;
+    max-width: 110vh;
+    font-size: 75px;
+    text-align: center;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+
+  }
 }
 
 @keyframes scale {
