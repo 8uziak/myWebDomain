@@ -37,9 +37,3 @@ I am the only author of this project - github.com/8uziak.
 ```diff
 + active / in progress 
 ```
-
-
-
-/* FOR PHONE/TABLET SCREEEN */
-
-/* FOR DESCTOP SCREEEN */
