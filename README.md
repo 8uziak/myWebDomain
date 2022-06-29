@@ -12,13 +12,13 @@ The website was created using the **Python 3.8.5** programming language (mainly 
 
 ## Link
 
--> [www.mateuszbuziak.com](www.mateuszbuziak.com)
+-> [www.mateuszbuziak.com](https://mateuszbuziak.com/)
 
 ## Roadmap
 
 My plans still include:
 
-- [x] buying domenta (check - [www.mateuszbuziak.com](www.mateuszbuziak.com) has been bought)
+- [x] buying domenta (check - [www.mateuszbuziak.com](https://mateuszbuziak.com/) has been bought)
     - [x] implementing it (it's live!)
 - [x] adding SSL certificate
     - [x] it's working and typing url basic url (http) redirects to https (thanks to EC2)
@@ -37,3 +37,9 @@ I am the only author of this project - github.com/8uziak.
 ```diff
 + active / in progress 
 ```
+
+
+
+/* FOR PHONE/TABLET SCREEEN */
+
+/* FOR DESCTOP SCREEEN */

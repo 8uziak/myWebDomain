@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap');
 
+
+/* FOR PHONE/TABLET SCREEEN */
 @media only screen and (max-width:480px) {
   form { 
 
@@ -9,6 +11,8 @@
   }
 }
 
+
+/* FOR DESCTOP SCREEEN */
 @media only screen and (min-width:481px) {
   form { 
 

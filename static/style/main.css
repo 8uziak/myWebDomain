@@ -2,13 +2,7 @@
 
 
 /* BASICS -- */
-/* HEADER --TOPNAV */
 
-header {
-    
-  background:#ECECEC; 
-  position: fixed;
-}
 
 body { 
 
@@ -33,8 +27,15 @@ body {
   font-size: 30px;
 }
 
-
+/* FOR PHONE/TABLET SCREEEN */
 @media only screen and (max-width:480px ) {
+  
+  /* HEADER --TOPNAV */
+  header {
+    
+    background:#ECECEC; 
+    position: fixed;
+  }
 
   header ul {
     background:#ECECEC; 
@@ -129,7 +130,15 @@ body {
   }
 }
 
+/* FOR DESCTOP SCREEEN */
 @media only screen and (min-width:481px) {
+
+  /* HEADER --TOPNAV */
+  header {
+    
+    background:#ECECEC; 
+
+  }
   
   header ul {
   
