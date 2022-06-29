@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap');
 
-@media only screen and (max-width:320px) {
+@media only screen and (max-width:480px) {
     div {
 
         cursor: default;
@@ -10,7 +10,7 @@
 
         min-height: 100vh;
         display: flex;
-        margin-top:100px;
+        margin-top:20px;
         margin-bottom:100px;
         flex-direction: column;
         justify-content: center;
@@ -91,7 +91,7 @@
         transform: scale(1);
     }
 }
-@media only screen and (min-width:321px) {
+@media only screen and (min-width:481px) {
     div {
 
         cursor: default;

@@ -10,7 +10,7 @@ article {
   align-items: center;
 }
 
-@media only screen and (max-width:320px) {
+@media only screen and (max-width:480px) {
   h1 {
 
     font-family: 'Oswald', sans-serif;
@@ -23,7 +23,7 @@ article {
   }
 }
 
-@media only screen and (min-width:321px) {
+@media only screen and (min-width:481px) {
   h1 {
 
     font-family: 'Oswald', sans-serif;

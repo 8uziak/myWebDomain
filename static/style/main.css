@@ -2,6 +2,13 @@
 
 
 /* BASICS -- */
+/* HEADER --TOPNAV */
+
+header {
+    
+  background:#ECECEC; 
+  position: fixed;
+}
 
 body { 
 
@@ -17,33 +24,6 @@ body {
   display: none; 
 }
 
-/* HEADER --TOPNAV */
-
-header {
-  
-  background:#ECECEC; 
-}
-
-header ul {
-
-  color: #070707;
-  list-style-type: none;
-  margin: 0%;
-  padding: 0%;
-  overflow: hidden;
-  margin-top: 7px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-header ul li.left {
-
-  
-  text-align: center;
-  float: left;
-  font-size: 17px;
-}
-
 .mid {
 
   place-items: center;  
@@ -53,119 +33,246 @@ header ul li.left {
   font-size: 30px;
 }
 
-header ul li.right {
 
-  text-align: center;
-  float: right;
-  font-size: 17px;
+@media only screen and (max-width:480px ) {
+
+  header ul {
+    background:#ECECEC; 
+    list-style-type: none;
+    list-style:none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display:flex;
+    margin: 0%;
+    padding: 0%;
+    
+  }
+
+
+  header ul li a {
+    display:flex;
+    color: #070707;
+    cursor: pointer;    
+    text-decoration: none;
+    background-color: #ECECEC;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 50px;
+  }
+
+  header.home ul li a.home {
+
+    justify-content: center;
+    align-items: center;
+    background-color: #F78888;
+    width: 25vw;
+  }
+
+  header.projects ul li a.projects {
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #F3D250;
+  }
+
+  header.about ul li a.about {
+    justify-content: center;
+    align-items: center;
+    background-color: #90CCF4;
+  }
+
+  header.contact ul li a.contact {
+    justify-content: center;
+    align-items: center;
+    background-color: #5DA2D5;
+  }
+
+  /* FOOTER -- */
+  footer { 
+
+    min-height:50px; 
+    background:#ECECEC; 
+    position: bottom;
+    overflow: hidden;
+    padding-top:0px;
+    cursor: default;
+    margin-bottom: 50px;
+
+  }
+  footer ul {
+
+    overflow: hidden;
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  footer li {
+
+    
+    font-size: 0px;
+  }
+
+  footer ul li.end-logo {
+
+      color:#070707;
+      text-align: center;
+      font-size: 30px;
+      cursor: default; 
+      margin-bottom: 0px;
+  }
 }
 
-header ul li a {
-  display: block;
-  color: #070707;
-  cursor: pointer;    
-  text-decoration: none;
-  padding: 14px 16px;
-  word-spacing: 30px;
-}
-
-header ul li a {
-
-  width: 40px;
-  background-color: #ECECEC;
-  transition: width 0.25s, background-color 0.25s;
-}
-
-header.home ul li a.home {
-
-  width: 100px;
-  background-color: #F78888;
-}
-
-header ul li a.home:hover {
-
-  width: 100px;
-  background-color: #F78888;
-}
-
-header.projects ul li a.projects {
+@media only screen and (min-width:481px) {
   
-  width: 100px;
-  background-color: #F3D250;
-}
-
-header ul li a.projects:hover {
-
-  width: 100px;
-  background-color: #F3D250;
-
-}
-
-header.about ul li a.about {
+  header ul {
   
-  width: 100px;
-  background-color: #90CCF4;
-}
+    color: #070707;
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    margin-top: 7px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  header ul li.left {
+  
+    
+    text-align: center;
+    float: left;
+    font-size: 17px;
+  }
+  
+  .mid {
+  
+    place-items: center;  
+    text-align: center;
+    float:none;
+    cursor: default;
+    font-size: 30px;
+  }
+  
+  header ul li.right {
+  
+    text-align: center;
+    float: right;
+    font-size: 17px;
+  }
+  
+  header ul li a {
+    display: block;
+    color: #070707;
+    cursor: pointer;    
+    text-decoration: none;
+    padding: 14px 16px;
+    word-spacing: 30px;
+  }
+  
+  header ul li a {
+  
+    width: 40px;
+    background-color: #ECECEC;
+    transition: width 0.25s, background-color 0.25s;
+  }
+  
+  header.home ul li a.home {
+  
+    width: 100px;
+    background-color: #F78888;
+  }
+  
+  header ul li a.home:hover {
+  
+    width: 100px;
+    background-color: #F78888;
+  }
+  
+  header.projects ul li a.projects {
+    
+    width: 100px;
+    background-color: #F3D250;
+  }
+  
+  header ul li a.projects:hover {
+  
+    width: 100px;
+    background-color: #F3D250;
+  
+  }
+  
+  header.about ul li a.about {
+    
+    width: 100px;
+    background-color: #90CCF4;
+  }
+  
+  header ul li a.about:hover {
+  
+    width: 100px;
+    background-color: #90CCF4;
+  }
+  
+  header.contact ul li a.contact {
+  
+    width: 100px;
+    background-color: #5DA2D5;
+  }
+  
+  header ul li a.contact:hover {
+  
+    width: 100px;
+    background-color: #5DA2D5;
+  }
 
-header ul li a.about:hover {
+  /* FOOTER -- */
+  footer { 
 
-  width: 100px;
-  background-color: #90CCF4;
-}
-
-header.contact ul li a.contact {
-
-  width: 100px;
-  background-color: #5DA2D5;
-}
-
-header ul li a.contact:hover {
-
-  width: 100px;
-  background-color: #5DA2D5;
-}
-
-/* FOOTER -- */
-
-footer { 
-
-  min-height:50px; 
-  background:#ECECEC; 
-  position: bottom;
-  overflow: hidden;
-  padding-top:0px;
-  cursor: default;
+    min-height:50px; 
+    background:#ECECEC; 
+    position: bottom;
+    overflow: hidden;
+    padding-top:0px;
+    cursor: default;
 
 
-}
+  }
+  footer ul {
 
-footer ul {
+    overflow: hidden;
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+  }
 
-  overflow: hidden;
-  text-decoration: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  list-style-type: none;
-  margin: 0%;
-  padding: 0%;
-}
+  footer ul li.end-logo {
 
-footer ul li.end-logo {
+      color:#070707;
+      text-align: center;
+      font-size: 30px;
+      cursor: default; 
+      margin-bottom: 0px;
+  }
+
+  footer ul li.copyright {
 
     color:#070707;
     text-align: center;
     font-size: 30px;
-    cursor: default; 
-    margin-bottom: 0px;
+    cursor: pointer; 
+  }
 }
 
-footer ul li.copyright {
-
-  color:#070707;
-  text-align: center;
-  font-size: 30px;
-  cursor: pointer; 
-}
 
 /* BODY --------------------------------- */
 

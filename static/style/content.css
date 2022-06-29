@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap');
 
-@media only screen and (max-width:320px) {
+@media only screen and (max-width:480px) {
     .contentplus{
     
         min-height: 100vh;
@@ -40,7 +40,7 @@
     }
 }
 
-@media only screen and (min-width:321px) {
+@media only screen and (min-width:481px) {
     .contentplus{
   
         min-height: 100vh;
