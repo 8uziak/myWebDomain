@@ -26,7 +26,7 @@ My plans still include:
 - [ ] constantly adding new projects
 - [X] adding mobile version(s)?
 - [X] sending confirmation mail to sender after filling mail form 
-    - [] work on better styling of the message
+    - [ ] work on better styling of the message
 - [ ] SEO
 
 ## Author
