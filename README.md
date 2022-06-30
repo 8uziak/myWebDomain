@@ -8,7 +8,7 @@ The website has many interactive elements such as text appearing on the main pag
 
 ## Stack
 
-The website was created using the **Python 3.8.5** programming language (mainly **Flask**), **HTML5** and **CSS**. I used **AWS (Amazon Web Services)** to deploy the website to the web: **Elastic Beanstalk, S3, RDS, EC2, Route 53, CodePipeline, Certificate Manager**. I used **MySQL Workbench 8.0** to create the tables and to check the connection to the server.
+The website was created using the **Python 3.8.5** programming language (mainly **Flask**), **MySQL**, **HTML5** and **CSS**. I used **AWS (Amazon Web Services)** to deploy the website to the web: **Elastic Beanstalk, S3, RDS, EC2, Route 53, CodePipeline, Certificate Manager**. I used **MySQL Workbench 8.0** to create the tables and to check the connection to the server.
 
 ## Link
 
@@ -24,8 +24,9 @@ My plans still include:
     - [x] it's working and typing url basic url (http) redirects to https (thanks to EC2)
 - [ ] adding more variety to the website (maybe JavaScript?)
 - [ ] constantly adding new projects
-- [ ] adding mobile version(s)?
-- [ ] sending confirmation mail to sender after filling mail form 
+- [X] adding mobile version(s)?
+- [X] sending confirmation mail to sender after filling mail form 
+    - [] work on better styling of the message
 - [ ] SEO
 
 ## Author

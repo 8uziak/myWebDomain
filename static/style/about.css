@@ -82,6 +82,7 @@
         transform: scale(1.10);
         -webkit-transition: .3s ease-in-out;
         transition: .3s ease-in-out;
+        
     }
 
     .mg img:hover{
