@@ -65,12 +65,13 @@
 
     .g {
         text-align: center;
+        z-index: 1;
     }
 
     .mg {
         margin: 7.5px; 
         display: inline-block;
-        
+        z-index: 1;
     }
 
     .mg img {
@@ -82,6 +83,7 @@
         transform: scale(1.10);
         -webkit-transition: .3s ease-in-out;
         transition: .3s ease-in-out;
+        z-index: 1;
         
     }
 
@@ -108,7 +110,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top:100px;
         margin-bottom:100px;
     }
 

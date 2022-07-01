@@ -24,7 +24,7 @@ My plans still include:
     - [x] it's working and typing url basic url (http) redirects to https (thanks to EC2)
 - [ ] adding more variety to the website (maybe JavaScript?)
 - [ ] constantly adding new projects
-- [X] adding mobile version(s)?
+- [X] adding mobile version(s) ?
 - [X] sending confirmation mail to sender after filling mail form 
     - [ ] work on better styling of the message
 - [ ] SEO

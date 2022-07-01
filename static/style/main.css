@@ -35,6 +35,7 @@ body {
     
     background:#ECECEC; 
     position: fixed;
+    z-index: 2;
   }
 
   header ul {
@@ -47,7 +48,7 @@ body {
     display:flex;
     margin: 0%;
     padding: 0%;
-
+    z-index: 2;
     
   }
 
@@ -63,6 +64,15 @@ body {
     align-items: center;
     width: 25vw;
     height: 50px;
+    z-index: 2;
+  }
+
+  header ul li.left {
+    float: left;
+  }
+
+  header ul li.right {
+    float: right;
   }
 
   header.home ul li a.home {

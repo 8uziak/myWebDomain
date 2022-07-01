@@ -139,19 +139,17 @@ def contact_sent():
         if not is_valid: 
             return render_template("contact.html", fail=True)
 
-
         # confirmation messege to the sender
         msg_conf = Message(subject=f"Confirmation of the email sent to the site owner: 'mateuszbuziak.com'", sender=os.getenv("mail_user_name") , recipients=[f"{email}"])
         msg_conf.html = f"<h1 style='margin-left:5px'>Hi {name}, <br><br> You sent a message using this email ({email}). <br><br> Your message to the sender was: <br> {message}</h1>"
         mail.send(msg_conf)
-        # space to do this 
 
         # messege to the owner of the website 
         msg = Message(subject=f"Message from {name}, email: {email}", sender=os.getenv("mail_user_name") , recipients=["matbuziak@gmail.com"])
 
         # styling the messege
         # better styling TO DO !
-        msg.html = f"<h1 style='margin-left:5px'>{message}</h1>" #tbc
+        msg.html = f"<h1 style='margin-left:5px'>{message}</h1>"
         mail.send(msg)
 
         return render_template("contact.html",success=True)
