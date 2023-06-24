@@ -30,13 +30,13 @@ My plans still include:
     - [x] implementing it (it's live!)
 - [x] adding SSL certificate
     - [x] it's working and typing url basic url (http) redirects to https (thanks to EC2)
-- [ ] adding more variety to the website (maybe JavaScript?)
-    - [ ] I have to fix navbar on mobile to make in more fluid 
-- [ ] constantly adding new projects
+- [ ] ~~adding more variety to the website (maybe JavaScript?)~~
+    - [ ] ~~I have to fix navbar on mobile to make in more fluid~~
+- [ ] ~~constantly adding new projects~~
 - [X] adding mobile version(s) ?
 - [X] sending confirmation mail to sender after filling mail form 
-    - [ ] work on better styling of the message
-- [ ] SEO
+    - [ ] ~~work on better styling of the message~~
+- [ ] ~~SEO~~
 
 ## Author
 
