@@ -12,7 +12,7 @@ The website was created using the **Python 3.8.5** programming language (mainly 
 
 ## Link
 
--> [www.mateuszbuziak.com](https://mateuszbuziak.com/)
+-> [~~www.mateuszbuziak.com~~](https://mateuszbuziak.com/) (due to the high cost of maintaining the website, I decided to deactivate it)
 
 ## Roadmap
 
