@@ -1,4 +1,12 @@
-﻿# myWebDomain (fullstack)
+## Project status
+
+```diff
+- inactive
+```
+
+### due to the high cost of maintaining the website, I decided to deactivate it
+ 
+ # myWebDomain (fullstack)
 
 **myWebDomain** - is my personal website which I built by myself with the idea of publishing my projects. After some time I liked this project so much that I decided to turn it into my personal website.
 
@@ -12,13 +20,13 @@ The website was created using the **Python 3.8.5** programming language (mainly 
 
 ## Link
 
--> [~~www.mateuszbuziak.com~~](https://mateuszbuziak.com/) (due to the high cost of maintaining the website, I decided to deactivate it)
+-> [~~www.mateuszbuziak.com~~](https://mateuszbuziak.com/) 
 
 ## Roadmap
 
 My plans still include:
 
-- [x] buying domenta (check - [www.mateuszbuziak.com](https://mateuszbuziak.com/) has been bought)
+- [x] buying domenta (check - [~~www.mateuszbuziak.com~~](https://mateuszbuziak.com/) has been bought)
     - [x] implementing it (it's live!)
 - [x] adding SSL certificate
     - [x] it's working and typing url basic url (http) redirects to https (thanks to EC2)
@@ -33,9 +41,3 @@ My plans still include:
 ## Author
 
 I am the only author of this project - github.com/8uziak.
-
-## Project status
-
-```diff
-- inactive
-```
