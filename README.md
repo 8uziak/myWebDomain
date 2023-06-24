@@ -37,5 +37,5 @@ I am the only author of this project - github.com/8uziak.
 ## Project status
 
 ```diff
-+ active / in progress 
+- inactive
 ```
